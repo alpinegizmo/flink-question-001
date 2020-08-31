@@ -1,5 +1,6 @@
 package org.example.prow.wikimedia;
 
+import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -48,7 +49,6 @@ public class Event {
         this.eventType = EventType.fromString(scanner.next());
 
         this.eventTimestamp = ZonedDateTime.parse(scanner.next(), fmter);
-
         this.rest = scanner.nextLine();
     }
 

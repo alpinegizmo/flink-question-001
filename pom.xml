@@ -14,15 +14,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- Versions -->
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <scala.binary.version>2.11</scala.binary.version>
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
         <maven-shade-plugin.version>3.2.3</maven-shade-plugin.version>
 
-        <beam.version>2.22.0</beam.version>
-        <flink.version>1.11.0</flink.version>
+        <flink.version>1.10.0</flink.version>
 
         <picocli.version>4.3.0</picocli.version>
 
@@ -60,20 +59,18 @@
             <version>${flink.version}</version>
         </dependency>
 
-
-        <!-- Beam stuff -->
-        <!-- Adds a dependency on the Beam SDK. -->
         <dependency>
-            <groupId>org.apache.beam</groupId>
-            <artifactId>beam-sdks-java-core</artifactId>
-            <version>${beam.version}</version>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-runtime-web_2.11</artifactId>
+            <version>${flink.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.beam</groupId>
-            <artifactId>beam-runners-flink-1.10</artifactId>
-            <version>${beam.version}</version>
-            <!--            <scope>runtime</scope>-->
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-runtime_2.11</artifactId>
+            <version>${flink.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
